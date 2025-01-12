@@ -79,7 +79,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 6 DOUBLE_QUOTES  &lt 1 ENTER  &lt_to_layer_0 3 SPACE      &kp ENTER  &lt 2 DELETE                             &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&inc_dec_kp F13 F14>;
         };
 
         NUM {
