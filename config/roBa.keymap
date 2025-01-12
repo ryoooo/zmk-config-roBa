@@ -75,12 +75,12 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                &kp T                                                   &kp Y         &kp U  &lt 5 I    &kp O    &kp P
-&mt LCTRL A       &kp S         &kp D         &kp F                &kp G            &kp UP                      &kp DOWN   &kp H         &kp J  &kp K      &kp L    &kp SEMICOLON
+&mt LCTRL A       &kp S         &kp D         &kp F                &kp G            &kp PRINTSCREEN             &kp DOWN   &kp H         &kp J  &kp K      &kp L    &kp SEMICOLON
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                &kp B            &kp LEFT                    &kp RIGHT  &kp N         &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 6 DOUBLE_QUOTES  &lt 1 BACKSPACE  &lt_to_layer_0 3 SPACE      &kp ENTER  &lt 2 DELETE                             &kp RIGHT_SHIFT
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 6 DOUBLE_QUOTES  &lt 1 BACKSPACE  &lt_to_layer_0 4 SPACE      &kp ENTER  &lt 2 DELETE                             &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&inc_dec_kp F13 F14>;
+            sensor-bindings = <&inc_dec_kp DOWN UP>;
         };
 
         NUM {
@@ -103,10 +103,10 @@
 
         FUNC {
             bindings = <
-&kp F1          &kp F2                  &kp F3             &kp F4       &kp F5                                  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&kp TAB         &kp LC(RS(TAB))         &kp LC(TAB)        &kp LG(TAB)  &trans  &kp PAGE_UP      &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &kp F11
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT))  &trans       &trans  &kp HOME         &kp END        &trans  &trans  &trans  &trans  &trans
-&trans          &kp LC(LG(LEFT))        &kp LC(LG(RIGHT))  &trans       &trans  &trans           &kp DELETE     &trans                          &trans
+&kp F1          &kp F2                  &kp F3             &kp F4       &kp F5                                      &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&kp TAB         &kp LC(RS(TAB))         &kp LC(TAB)        &kp LG(TAB)  &trans      &kp PAGE_UP      &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &kp F11
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT))  &trans       &trans      &kp HOME         &kp END        &trans  &trans  &trans  &trans  &kp F12
+&trans          &kp LC(LG(LEFT))        &kp LC(LG(RIGHT))  &trans       &kp DELETE  &trans           &trans         &trans                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
