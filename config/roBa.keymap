@@ -115,9 +115,11 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &mkp MB1  &mkp MB3  &mkp MB2
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp 0 0>;
         };
 
         SCROLL {
