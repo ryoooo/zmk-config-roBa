@@ -122,7 +122,7 @@
 &trans  &trans  &trans  &trans  &trans                        &trans          &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans    &msc SCRL_UP    &mkp MB1  &mkp MB3  &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans    &msc SCRL_DOWN  &trans    &mkp MB1  &mkp MB3  &mkp MB2
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB4  &mkp MB5                                      &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB5  &mkp MB4                                      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp 0 0>;
