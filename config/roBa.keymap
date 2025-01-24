@@ -107,10 +107,10 @@
 
         FUNC {
             bindings = <
-&kp F1          &kp F2                  &kp F3             &kp F4       &kp F5                                  &kp F6  &kp F7            &kp F8       &kp F9             &kp F10
-&kp TAB         &kp LC(RS(TAB))         &kp LC(TAB)        &kp LG(TAB)  &trans  &kp PAGE_UP      &kp PAGE_DOWN  &trans  &kp LC(LG(LEFT))  &kp LG(TAB)  &kp LC(LG(RIGHT))  &kp F11
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT))  &trans       &trans  &kp HOME         &kp END        &trans  &kp LG(LS(LEFT))  &kp LG(D)    &kp LG(LS(RIGHT))  &kp F12
-&trans          &kp LC(LG(LEFT))        &kp LC(LG(RIGHT))  &trans       &trans  &trans           &trans         &trans                                                    &kp PRINTSCREEN
+&kp F1          &kp F2                  &kp F3             &kp F4       &kp F5                                  &kp F6    &kp F7            &kp F8       &kp F9             &kp F10
+&kp TAB         &kp LC(RS(TAB))         &kp LC(TAB)        &kp LG(TAB)  &trans  &kp PAGE_UP      &kp PAGE_DOWN  &mkp MB5  &kp LC(LG(LEFT))  &kp LG(TAB)  &kp LC(LG(RIGHT))  &kp F11
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT))  &trans       &trans  &kp HOME         &kp END        &mkp MB4  &kp LG(LS(LEFT))  &kp LG(D)    &kp LG(LS(RIGHT))  &kp F12
+&trans          &kp LC(LG(LEFT))        &kp LC(LG(RIGHT))  &trans       &trans  &trans           &trans         &trans                                                      &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_DOWN) LC(PAGE_UP)>;
