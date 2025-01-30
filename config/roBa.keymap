@@ -138,7 +138,7 @@
             bindings = <
 &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                        &trans   &trans          &kp UP    &trans      &trans
 &trans          &trans        &trans        &trans        &trans        &bt BT_CLR          &kp LG(NUMBER_1)  &kp F14  &kp LEFT        &kp DOWN  &kp RIGHT   &trans
-&bt BT_CLR_ALL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &bt BT_CLR_ALL      &kp LG(NUMBER_2)  &kp F13  &kp C_PREVIOUS  &kp F15   &kp C_NEXT  &trans
+&trans          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &bt BT_CLR_ALL      &kp LG(NUMBER_2)  &kp F13  &kp C_PREVIOUS  &kp F15   &kp C_NEXT  &trans
 &studio_unlock  &trans        &trans        &trans        &trans        &trans              &kp LA(BSLH)      &trans                                         &bootloader
             >;
 
