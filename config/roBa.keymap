@@ -14,12 +14,12 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12>;
+            key-positions = <11 10>;
         };
 
         shift_tab {
             bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
+            key-positions = <12 11>;
         };
 
         muhennkann {
@@ -44,7 +44,7 @@
 
         bs {
             bindings = <&kp BACKSPACE>;
-            key-positions = <8>;
+            key-positions = <8 9>;
         };
     };
 
