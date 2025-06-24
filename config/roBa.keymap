@@ -110,7 +110,7 @@
             bindings = <
 &kp LS(NUMBER_1)            &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                                              &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)   &kp LS(NUMBER_0)
 &kp SLASH                   &kp KP_NUMBER_4   &kp KP_NUMBER_5   &kp KP_NUMBER_6   &kp ASTERISK      &kp LC(LA(KP_NUMBER_0))      &kp GRAVE      &kp MINUS         &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SLASH
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1   &kp KP_NUMBER_2   &kp KP_NUMBER_3   &kp PERIOD        &kp EQUAL                    &kp LS(GRAVE)  &kp LS(MINUS)     &kp LS(DOLLAR)    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp BACKSLASH
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1   &kp KP_NUMBER_2   &kp KP_NUMBER_3   &kp PERIOD        &kp EQUAL                    &kp LS(GRAVE)  &kp LS(MINUS)     &kp LS(EQUAL)     &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp BACKSLASH
 &trans                      &trans            &trans            &trans            &trans            &trans                       &trans         &trans                                                                   &kp LS(BACKSLASH)
             >;
         };
