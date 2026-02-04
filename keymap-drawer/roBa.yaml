@@ -42,7 +42,7 @@ layers:
   - {t: BACKSPACE, h: Number}
   - {t: '&to_layer_0 SPACE', h: Symbol}
   - {t: ENTER, h: Function}
-  - {t: Ctl+SPACE, h: Symbol}
+  - '&td_ime'
   - RIGHT SHIFT
   Number:
   - {t: ▽, type: trans}
@@ -199,7 +199,7 @@ layers:
   - '&mkp MB3'
   - '&mkp_exit_AML MB2'
   - '&to_layer_0 SEMICOLON'
-  - '&to_layer_0 Z'
+  - {t: '&to_layer_0 Z', h: LEFT SHIFT}
   - '&to_layer_0 X'
   - '&to_layer_0 C'
   - '&to_layer_0 V'
@@ -218,7 +218,7 @@ layers:
   - {t: '&to_layer_0 BACKSPACE', h: Number}
   - {t: '&to_layer_0 SPACE', h: Symbol}
   - {t: '&to_layer_0 ENTER', h: Function}
-  - {t: '&to_layer_0 LC(SPACE)', h: Symbol}
+  - '&td_ime_aml'
   - {t: ▽, type: trans}
   SCROLL:
   - {t: ▽, type: trans}
