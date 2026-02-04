@@ -112,14 +112,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&lt 2 INT_MUHENKAN>, <&kp INT_HENKAN>;
+            bindings = <&lt 2 LANG2>, <&kp LANG1>;
         };
 
         td_ime_aml: tap_dance_ime_aml {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&lt_to_layer_0 2 INT_MUHENKAN>, <&kp INT_HENKAN>;
+            bindings = <&lt_to_layer_0 2 LANG2>, <&kp LANG1>;
         };
     };
 
