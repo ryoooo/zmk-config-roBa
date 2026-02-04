@@ -99,6 +99,28 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        mt_to_layer_0: mod_tap_to_layer_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_TAP_TO_0";
+            bindings = <&kp>, <&to_layer_0>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        td_ime: tap_dance_ime {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt 2 INT_MUHENKAN>, <&kp INT_HENKAN>;
+        };
+
+        td_ime_aml: tap_dance_ime_aml {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt_to_layer_0 2 INT_MUHENKAN>, <&kp INT_HENKAN>;
+        };
     };
 
     keymap {
@@ -109,7 +131,7 @@
 &kp Q             &kp W         &kp E         &kp R         &kp T                                                         &kp Y            &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F         &kp G            &kp UP_ARROW                &kp DOWN_ARROW   &kp H            &kp J  &kp K      &kp L    &kp SEMICOLON
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V         &kp B            &kp LEFT_ARROW              &kp RIGHT_ARROW  &kp N            &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 6 DELETE  &lt 1 BACKSPACE  &lt_to_layer_0 2 SPACE      &lt 3 ENTER      &lt 2 LC(SPACE)                             &kp RIGHT_SHIFT
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 6 DELETE  &lt 1 BACKSPACE  &lt_to_layer_0 2 SPACE      &lt 3 ENTER      &td_ime                             &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -148,8 +170,8 @@
             bindings = <
 &to_layer_0 Q  &to_layer_0 W  &to_layer_0 E  &to_layer_0 R            &to_layer_0 T                                                                   &to_layer_0 Y               &to_layer_0 U      &lt_to_layer_0 5 I  &to_layer_0 O      &to_layer_0 P
 &to_layer_0 A  &to_layer_0 S  &to_layer_0 D  &to_layer_0 F            &to_layer_0 G               &to_layer_0 UP              &to_layer_0 DOWN        &to_layer_0 H               &mkp_exit_AML MB1  &mkp MB3            &mkp_exit_AML MB2  &to_layer_0 SEMICOLON
-&to_layer_0 Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V            &to_layer_0 B               &to_layer_0 LEFT            &to_layer_0 RIGHT       &to_layer_0 N               &to_layer_0 M      &to_layer_0 COMMA   &to_layer_0 DOT    &to_layer_0 FSLH
-&trans         &trans         &trans         &lt_to_layer_0 6 DELETE  &lt_to_layer_0 1 BACKSPACE  &lt_to_layer_0 2 SPACE      &lt_to_layer_0 3 ENTER  &lt_to_layer_0 2 LC(SPACE)                                                            &trans
+&mt_to_layer_0 LEFT_SHIFT Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V            &to_layer_0 B               &to_layer_0 LEFT            &to_layer_0 RIGHT       &to_layer_0 N               &to_layer_0 M      &to_layer_0 COMMA   &to_layer_0 DOT    &to_layer_0 FSLH
+&trans                       &trans         &trans         &lt_to_layer_0 6 DELETE  &lt_to_layer_0 1 BACKSPACE  &lt_to_layer_0 2 SPACE      &lt_to_layer_0 3 ENTER  &td_ime_aml                                                            &trans
             >;
         };
 
