@@ -306,7 +306,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Alt+\
-  - Alt+]
+  - RIGHT ALT
   - BT CLR ALL
 combos:
 - p: [11, 10]
