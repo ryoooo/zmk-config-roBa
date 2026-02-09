@@ -13,6 +13,22 @@
 };
 
 / {
+    zip_temp_layer_threshold: zip_temp_layer_threshold {
+        compatible = "zmk,input-processor-temp-layer-threshold";
+        #input-processor-cells = <2>;
+        threshold = <10>;
+        require-prior-idle-ms = <300>;
+        excluded-positions = <18 19 20>;
+        reset-timeout-ms = <200>;
+    };
+
+    trackball_listener {
+        status = "okay";
+        input-processors = <&zip_temp_layer_threshold 4 100000>;
+    };
+};
+
+/ {
     combos {
         compatible = "zmk,combos";
 
