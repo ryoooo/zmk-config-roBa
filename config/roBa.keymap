@@ -23,7 +23,6 @@
     };
 
     trackball_listener {
-        status = "okay";
         input-processors = <&zip_temp_layer_threshold 4 100000>;
     };
 };
