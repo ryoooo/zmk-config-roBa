@@ -18,7 +18,7 @@
         #input-processor-cells = <2>;
         threshold = <10>;
         require-prior-idle-ms = <300>;
-        excluded-positions = <18 19 20>;
+        excluded-positions = <18 19 20 22 34 35 36 42>;
         reset-timeout-ms = <200>;
     };
 
@@ -170,7 +170,7 @@
         MOUSE {
             bindings = <
 &to_layer_0 Q  &to_layer_0 W  &to_layer_0 E  &to_layer_0 R            &to_layer_0 T                                                                   &to_layer_0 Y               &to_layer_0 U      &lt_to_layer_0 5 I  &to_layer_0 O      &to_layer_0 P
-&to_layer_0 A  &to_layer_0 S  &to_layer_0 D  &to_layer_0 F            &to_layer_0 G               &to_layer_0 UP              &to_layer_0 DOWN        &to_layer_0 H               &mkp_exit_AML MB1  &mkp MB3            &mkp_exit_AML MB2  &to_layer_0 SEMICOLON
+&to_layer_0 A  &to_layer_0 S  &to_layer_0 D  &to_layer_0 F            &to_layer_0 G               &to_layer_0 UP              &to_layer_0 DOWN        &to_layer_0 H               &mkp MB1           &mkp MB3            &mkp MB2           &to_layer_0 SEMICOLON
 &mt_to_layer_0 LEFT_SHIFT Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V            &to_layer_0 B               &to_layer_0 LEFT            &to_layer_0 RIGHT       &to_layer_0 N               &to_layer_0 M      &to_layer_0 COMMA   &to_layer_0 DOT    &to_layer_0 FSLH
 &trans                       &trans         &trans         &lt_to_layer_0 6 DELETE  &lt_to_layer_0 1 BACKSPACE  &lt_to_layer_0 2 SPACE      &lt_to_layer_0 3 ENTER  &td_ime_aml                                                            &trans
             >;
