@@ -195,9 +195,9 @@ layers:
   - '&to_layer_0 UP'
   - '&to_layer_0 DOWN'
   - '&to_layer_0 H'
-  - '&mkp_exit_AML MB1'
+  - '&mkp MB1'
   - '&mkp MB3'
-  - '&mkp_exit_AML MB2'
+  - '&mkp MB2'
   - '&to_layer_0 SEMICOLON'
   - {t: '&to_layer_0 Z', h: LEFT SHIFT}
   - '&to_layer_0 X'
