@@ -1,6 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
-#include <behaviors/input_gestures_accel.dtsi>
+
 
 / {
     chosen {
@@ -64,7 +64,7 @@
 
 
             , <&key_physical_attrs 100 100  650  387 (-2000)   650   387>
-            , <&key_physical_attrs 100 100  763  350 (-1000)     0   350>
+            , <&key_physical_attrs 100 100  763  350 (-1000)   763   350>
 
             , <&key_physical_attrs 100 100 1200  337       0     0     0>
 
@@ -117,10 +117,6 @@
         compatible = "zmk,input-listener";
         status = "disabled";
     };
-};
-
-&pointer_accel {
-    status = "disabled";
 };
 
 &spi0 {

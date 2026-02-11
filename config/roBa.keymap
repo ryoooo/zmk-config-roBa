@@ -8,25 +8,6 @@
     quick-tap-ms = <0>;
 };
 
-&trackball {
-    scroll-layers = <5>;
-};
-
-/ {
-    zip_temp_layer_threshold: zip_temp_layer_threshold {
-        compatible = "zmk,input-processor-temp-layer-threshold";
-        #input-processor-cells = <2>;
-        threshold = <10>;
-        require-prior-idle-ms = <300>;
-        excluded-positions = <18 19 20 22 34 35 36 42>;
-        reset-timeout-ms = <200>;
-    };
-
-    trackball_listener {
-        input-processors = <&pointer_accel &zip_temp_layer_threshold 4 100000>;
-    };
-};
-
 / {
     combos {
         compatible = "zmk,combos";

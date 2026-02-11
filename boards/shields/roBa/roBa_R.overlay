@@ -1,5 +1,8 @@
 #include "roBa.dtsi"
-#include <dt-bindings/input/input-event-codes.h>
+#include <behaviors/processors.dtsi>
+#include <behaviors/runtime-input-processor.dtsi>
+#include <behaviors/battery_history_request.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 
 &default_transform {
     col-offset = <6>;
@@ -15,25 +18,18 @@
             ;
 };
 
-&pointer_accel {
-    status = "okay";
-    input-type = <INPUT_EV_REL>;
-    codes = <INPUT_REL_X INPUT_REL_Y>;
-    sensor-dpi = <400>;
-    sensitivity = <1000>;           // 1.0x: 低速時は元のCPI=400と同じ感度
-    min-factor = <700>;             // 0.7x: 低速時に減速して精密操作しやすく
-    max-factor = <1800>;            // 1.8x: 高速時の最大加速
-    speed-threshold = <1000>;       // 加速開始する速度（高めで低速域はリニア）
-    speed-max = <3500>;             // 最大加速に達する速度
-    acceleration-exponent = <2>;    // 緩やかな指数カーブ
-    y-boost = <1000>;               // 1.0x: Y軸補正なし
-};
-
 / {
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        input-processors = <&mouse_runtime_input_processor>;
+
+        scroller {
+            compatible = "zmk,input-listener";
+            device = <&trackball>;
+            input-processors = <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
+        };
     };
 };
 
@@ -72,5 +68,9 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        cpi = <400>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
     };
 };
