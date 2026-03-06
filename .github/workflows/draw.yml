@@ -19,6 +19,7 @@ jobs:
       amend_commit: false
       keymap_patterns: "config/*.keymap"
       json_path: "config"
+      west_config_path: "config"
       config_path: "keymap_drawer.config.yaml" # config file, ignored if not exists
       output_folder: "keymap-drawer"
       destination: "both"
