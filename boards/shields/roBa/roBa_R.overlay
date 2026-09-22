@@ -1,5 +1,8 @@
 #include "roBa.dtsi"
 #include <dt-bindings/input/input-event-codes.h>
+#include <input/processors.dtsi>
+#include <input/processors/runtime-input-processor.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 
 &default_transform {
     col-offset = <6>;
@@ -29,11 +32,24 @@
     y-boost = <1000>;               // 1.0x: Y軸補正なし
 };
 
+&scroll_runtime_input_processor {
+    scale-divisor = <16>;
+};
+
 / {
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        // Keep the existing acceleration and automatic mouse-layer handling.
+        input-processors = <&pointer_accel &zip_temp_layer_threshold 4 100000
+                            &mouse_runtime_input_processor>;
+
+        scroller {
+            layers = <5>;
+            input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>,
+                               <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
+        };
     };
 };
 
@@ -72,5 +88,9 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        cpi = <400>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
     };
 };
