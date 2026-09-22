@@ -12,7 +12,11 @@ DYA導入前の構成は `pre-dya-studio` ブランチに保存しています�
 左右のファームウェアをビルドして書き込み、右側をUSB接続して
 [DYA Studio](https://studio.dya.cormoran.works/)から接続します。
 BLE管理・共通設定RPC・高速キーマップ取得・マウス／スクロール感度調整・PMW3610のCPIや省電力設定のRPCを有効にしています。
-バッテリー履歴は無効です。任意のRuntime Macro / Combo・OS検出・診断モジュールは追加していません。
+Runtime Macro／Combo・OS検出・接続先別レイヤー・Device Info／Watchdogも有効です。
+既存の6コンボをRuntime Comboの初期値へ移行しています。キー位置・出力は従来どおりで、Studioから編集できます。
+Runtime MacroはStudioで作成してキーへ割り当てます。既存の引数付き内部マクロは維持しています。
+接続先・OS別のレイヤー設定は初期状態では未指定です。Watchdogは障害記録を有効にし、周期的なフリーズ監視は無効にしています。
+バッテリー履歴は無効です。
 
 - 通常のキー配置、レイヤー7のHJKL矢印、既存のポインター加速設定を維持しています。
 - 自動マウスレイヤーはDYA標準のTemp-Layerへ移行しています。
