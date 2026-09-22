@@ -32,6 +32,14 @@
     y-boost = <1000>;               // 1.0x: Y軸補正なし
 };
 
+&mouse_runtime_input_processor {
+    temp-layer-enabled;
+    temp-layer = <4>;
+    temp-layer-activation-delay-ms = <300>;
+    // Closest supported value to the original 100000 ms (runtime uses uint16_t).
+    temp-layer-deactivation-delay-ms = <65535>;
+};
+
 &scroll_runtime_input_processor {
     scale-divisor = <16>;
 };
@@ -41,9 +49,7 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        // Keep the existing acceleration and automatic mouse-layer handling.
-        input-processors = <&pointer_accel &zip_temp_layer_threshold 4 100000
-                            &mouse_runtime_input_processor>;
+        input-processors = <&pointer_accel &mouse_runtime_input_processor>;
 
         scroller {
             layers = <5>;

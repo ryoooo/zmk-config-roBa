@@ -2,8 +2,6 @@ manifest:
   remotes:
     - name: cormoran
       url-base: https://github.com/cormoran
-    - name: yamaryu211
-      url-base: https://github.com/yamaryu211
     - name: nuovotaka
       url-base: https://github.com/nuovotaka
   projects:
@@ -56,9 +54,6 @@ manifest:
     - name: zmk-feature-fast-keymap
       remote: cormoran
       revision: 8dac76de0ba38588ba39ca498910e24f8332bc6b
-    - name: zmk-input-processor-temp-layer-threshold
-      remote: yamaryu211
-      revision: e7f39d5a61bc697d4f7e9a28212568fbda81d676
     - name: zmk-pointing-acceleration-alpha
       remote: nuovotaka
       revision: main

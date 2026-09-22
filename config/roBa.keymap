@@ -9,17 +9,6 @@
 };
 
 / {
-    zip_temp_layer_threshold: zip_temp_layer_threshold {
-        compatible = "zmk,input-processor-temp-layer-threshold";
-        #input-processor-cells = <2>;
-        threshold = <10>;
-        require-prior-idle-ms = <300>;
-        excluded-positions = <18 19 20 22 34 35 36 42>;
-        reset-timeout-ms = <200>;
-    };
-};
-
-/ {
     combos {
         compatible = "zmk,combos";
 
@@ -62,20 +51,6 @@
             label = "TO_LAYER_0";
         };
 
-        mkp_exit_AML: mkp_exit_AML {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&sl 4>;
-
-            label = "MKP_EXIT_AML";
-        };
     };
 
     behaviors {
@@ -88,15 +63,6 @@
             tapping-term-ms = <200>;
         };
 
-        mt_to_layer_0: mod_tap_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOD_TAP_TO_0";
-            bindings = <&kp>, <&to_layer_0>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
         td_ime: tap_dance_ime {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -104,12 +70,6 @@
             bindings = <&lt 7 LANG2>, <&kp LANG1>;
         };
 
-        td_ime_aml: tap_dance_ime_aml {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&lt_to_layer_0 7 LANG2>, <&kp LANG1>;
-        };
     };
 
     keymap {
@@ -157,10 +117,10 @@
 
         MOUSE {
             bindings = <
-&to_layer_0 Q                &to_layer_0 W  &to_layer_0 E  &to_layer_0 R            &to_layer_0 T                                                                   &to_layer_0 Y  &to_layer_0 U  &lt_to_layer_0 5 I  &to_layer_0 O    &to_layer_0 P
-&to_layer_0 A                &to_layer_0 S  &to_layer_0 D  &to_layer_0 F            &to_layer_0 G               &to_layer_0 UP              &to_layer_0 DOWN        &to_layer_0 H  &mkp MB1       &mkp MB3            &mkp MB2         &to_layer_0 SEMICOLON
-&mt_to_layer_0 LEFT_SHIFT Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V            &to_layer_0 B               &to_layer_0 LEFT            &to_layer_0 RIGHT       &to_layer_0 N  &to_layer_0 M  &to_layer_0 COMMA   &to_layer_0 DOT  &to_layer_0 FSLH
-&trans                       &trans         &trans         &lt_to_layer_0 6 DELETE  &lt_to_layer_0 1 BACKSPACE  &lt_to_layer_0 2 SPACE      &lt_to_layer_0 3 ENTER  &td_ime_aml                                                        &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&mt LEFT_SHIFT Z  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
 
@@ -169,7 +129,7 @@
 &trans  &trans  &trans  &trans  &trans                                 &trans             &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans             &trans             &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans             &trans             &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp_exit_AML MB5  &mkp_exit_AML MB4                          &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB5  &mkp MB4                          &trans
             >;
         };
 
