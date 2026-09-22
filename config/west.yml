@@ -58,7 +58,7 @@ manifest:
       revision: 8dac76de0ba38588ba39ca498910e24f8332bc6b
     - name: zmk-input-processor-temp-layer-threshold
       remote: yamaryu211
-      revision: main
+      revision: e7f39d5a61bc697d4f7e9a28212568fbda81d676
     - name: zmk-pointing-acceleration-alpha
       remote: nuovotaka
       revision: main
