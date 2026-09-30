@@ -184,7 +184,7 @@ layers:
   - '&to_layer_0 T'
   - '&to_layer_0 Y'
   - '&to_layer_0 U'
-  - {t: '&to_layer_0 I', h: SCROLL}
+  - {t: ▽, type: trans}
   - '&to_layer_0 O'
   - '&to_layer_0 P'
   - '&to_layer_0 A'
@@ -214,11 +214,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '&to_layer_0 DELETE', h: '6'}
-  - {t: '&to_layer_0 BACKSPACE', h: Number}
-  - {t: '&to_layer_0 SPACE', h: Symbol}
-  - {t: '&to_layer_0 ENTER', h: Function}
-  - '&td_ime_aml'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   SCROLL:
   - {t: ▽, type: trans}
