@@ -33,9 +33,11 @@
 };
 
 &mouse_runtime_input_processor {
+    scale-multiplier = <11>;
+    scale-divisor = <10>;
     temp-layer-enabled;
     temp-layer = <4>;
-    temp-layer-activation-delay-ms = <300>;
+    temp-layer-activation-delay-ms = <250>;
     // Closest supported value to the original 100000 ms (runtime uses uint16_t).
     temp-layer-deactivation-delay-ms = <65535>;
 };
