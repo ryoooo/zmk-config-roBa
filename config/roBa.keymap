@@ -7,11 +7,11 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    tapping-term-ms = <100>;
+    tapping-term-ms = <150>;
 };
 
 &lt {
-    tapping-term-ms = <100>;
+    tapping-term-ms = <150>;
 };
 
 / {
@@ -66,7 +66,7 @@
             bindings = <&mo>, <&to_layer_0>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
         };
 
         mt_to_layer_0: mod_tap_to_layer_0 {
@@ -75,7 +75,7 @@
             bindings = <&kp>, <&to_layer_0>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
         };
 
         td_ime: tap_dance_ime {
