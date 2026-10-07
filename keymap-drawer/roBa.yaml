@@ -150,8 +150,8 @@ layers:
   - {t: ▽, type: trans}
   - PAGE UP
   - PAGE DOWN
-  - {t: ▽, type: trans}
   - Ctl+Gui+LEFT ARROW
+  - Gui+TAB
   - Gui+TAB
   - Ctl+Gui+RIGHT ARROW
   - F11
@@ -162,8 +162,8 @@ layers:
   - {t: ▽, type: trans}
   - HOME
   - END
-  - {t: ▽, type: trans}
   - Gui+Sft+LEFT ARROW
+  - Gui+D
   - Gui+D
   - Gui+Sft+RIGHT ARROW
   - F12
